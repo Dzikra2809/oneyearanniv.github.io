@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anniversary Slide</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Lightbox Popup -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Preview" />
+  </div>
+
+  <body>
+    <div class="slider">
+      <div class="slide" style="background-image: url('img/slide1.jpg')">
+        <div class="text">
+          <h2>Our First Moment</h2>
+          <p>Where everything beautiful started.</p>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide2.jpg')">
+        <div class="text">
+          <h2>One Year Later</h2>
+          <p>Still loving, still growing.</p>
+          <div class="photo-grid">
+            <div class="photo"><img src="img/1.jpg" alt="Photo 1" /></div>
+            <div class="photo"><img src="img/2.jpg" alt="Photo 2" /></div>
+            <div class="photo"><img src="img/3.jpg" alt="Photo 3" /></div>
+            <div class="photo"><img src="img/4.jpg" alt="Photo 4" /></div>
+            <div class="photo"><img src="img/5.jpg" alt="Photo 5" /></div>
+            <div class="photo"><img src="img/6.jpg" alt="Photo 6" /></div>
+            <div class="photo"><img src="img/7.jpg" alt="Photo 7" /></div>
+            <div class="photo"><img src="img/8.jpg" alt="Photo 8" /></div>
+            <div class="photo"><img src="img/9.jpg" alt="Photo 9" /></div>
+            <div class="photo"><img src="img/10.jpg" alt="Photo 10" /></div>
+            <div class="photo"><img src="img/11.jpg" alt="Photo 11" /></div>
+            <div class="photo"><img src="img/12.jpg" alt="Photo 12" /></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide3.jpg')">
+        <div class="text">
+          <h2>Forever Together</h2>
+          <p>This is just the beginning...</p>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide4.jpg')">
+        <div class="text">
+          <h2>Love Card 💖</h2>
+          <p>Touch and feel the magic...</p>
+          <div class="card-container">
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-inner">
+                <div class="flip-front">💌</div>
+                <div class="flip-back">
+                  Happy Anniversary, my love. Every day with you feels like a
+                  dream I never want to wake up from. Here’s to forever — with
+                  you. ❤️
+                </div>
+              </div>
+            </div>
+            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+              <div class="flip-inner">
+                <div class="flip-front">💘</div>
+                <div class="flip-back">
+                  One year closer to forever with you. You’re not just my
+                  partner, you’re my peace, my home, my everything. I love you
+                  more each day. 💖
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide4.jpg')">
+        <div class="text">
+          <h2>Tic Tac Toe 💘</h2>
+          <p>Main bareng yuk!</p>
+          <div id="game-board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+          </div>
+          <p id="game-status"></p>
+          <button onclick="resetGame()" class="reset-btn">Main Lagi</button>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide4.jpg')">
+        <div class="digital-clock">
+          <span id="hours">00</span> : <span id="minutes">00</span> :
+          <span id="seconds">00</span>
+          <div class="days"><span id="days-count">0</span> Days</div>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image: url('img/slide4.jpg')">
+        <div id="book">
+          <input type="checkbox" id="five" />
+          <div id="page5" class="page">
+            <div class="front"><img src="img/11.jpg" alt="" /></div>
+            <div class="back">LOVE U BABE</div>
+            <label for="five"></label>
+          </div>
+
+          <input type="checkbox" id="four" />
+          <div id="page4" class="page">
+            <div class="front"><img src="img/9.jpg" alt="" /></div>
+            <div class="back">
+              "Aku tak menjanjikan langit tanpa badai, Tapi aku berjanji tak
+              akan pergi saat hujan datang, Kita akan menua, tapi cinta kita
+              tetap muda, Seperti lagu abadi yang tak pernah padam."
+            </div>
+            <label for="four"></label>
+          </div>
+
+          <input type="checkbox" id="three" />
+          <div id="page3" class="page">
+            <div class="front"><img src="img/5.jpg" alt="""></div>
+            <div class="back">
+              "Tertawa bersamamu seperti matahari pagi, Menerangi hari-hari yang
+              biasa jadi luar biasa, Kita tak sempurna, tapi saling melengkapi,
+              Dalam pelukmu, dunia terasa lebih ramah."
+            </div>
+            <label for="three"></label>
+          </div>
+
+          <input type="checkbox" id="two" />
+          <div id="page2" class="page">
+            <div class="front"><img src="img/2.jpg" alt="" /></div>
+            <div class="back">
+              "Malam tak lagi pekat saat kutahu kau menunggu, Jarak bukan musuh,
+              hanya waktu yang mengadu, Setiap detik tanpamu adalah lagu tanpa
+              nada, Dan hadirmu—bait yang membuatnya sempurna."
+            </div>
+            <label for="two"></label>
+          </div>
+
+          <input type="checkbox" id="one" />
+          <div id="page1" class="page">
+            <div class="front">MY💗LOVE</div>
+            <div class="back">
+              "Kau adalah diam yang paling kupahami, Tenangmu menenangkan ribut
+              dalam hati, Tak perlu kata, cukup kau di sini, Segalanya terasa
+              utuh dan pasti."
+            </div>
+            <label for="one"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <button id="prev">←</button>
+      <button id="next">→</button>
+    </div>
+
+    <audio id="bg-music" autoplay loop>
+      <source src="sound/hold me tight - Skyline.mp3" type="audio/mpeg" />
+      Browser kamu tidak mendukung audio.
+    </audio>
+
+    <button id="toggle-music" class="music-btn">🔊</button>
+
+    <script src="script.js"></script>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const h = now.getHours().toString().padStart(2, "0");
+        const m = now.getMinutes().toString().padStart(2, "0");
+        const s = now.getSeconds().toString().padStart(2, "0");
+
+        document.getElementById("hours").textContent = h;
+        document.getElementById("minutes").textContent = m;
+        document.getElementById("seconds").textContent = s;
+      }
+
+      function updateDays() {
+        const startDate = new Date("2024-06-11"); // ← tanggal jadian
+        const today = new Date(); // ← gunakan waktu sekarang
+        const diffTime = today - startDate;
+        const daysPassed = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1; // ← tambahkan 1 hari karena kita ingin menghitung hari yang telah
+        document.getElementById("days-count").textContent = daysPassed;
+      }
+
+      // Jalankan saat halaman dimuat
+      updateClock();
+      updateDays();
+
+      // Perbarui jam setiap detik
+      setInterval(() => {
+        updateClock();
+        updateDays(); // bisa diupdate setiap detik atau cukup sekali
+      }, 1000);
+    </script>
+  </body>
+</html>
