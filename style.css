@@ -755,3 +755,70 @@ body {
   padding-left: 2vh;
   animation: cover 10s linear infinite;
 }
+
+
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .photo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .flip-card {
+    width: 140px;
+    height: 200px;
+  }
+
+  #book {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100vw;
+  left: 0;
+  top: auto;
+  transform: none;
+  position: relative;
+}
+
+
+  .digital-clock {
+    font-size: 5vw;
+    padding: 20px 30px;
+  }
+
+  .digital-clock .days {
+    font-size: 3.5vw;
+  }
+
+  .nav button {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+  }
+
+  .reset-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .text h2 {
+    font-size: 1.4rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+
+  .music-btn {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+}
